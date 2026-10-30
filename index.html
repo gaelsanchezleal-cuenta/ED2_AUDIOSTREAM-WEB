@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioStream Web - Reproductor de Música</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/website" href="https://cdn-icons-png.flaticon.com/512/5662/5662059.png">
+
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Personalizada -->
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL SEMÁNTICO -->
+    <header class="py-4 shadow-sm">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <h1 class="display-4 fw-bold text-light m-0">AudioStream Web</h1>
+            
+            <!-- Botón de Acceso al Repositorio de GitHub -->
+            <a href="https://github.com/gaelsanchezleal-cuenta/ED2_AUDIOSTREAM-WEB.git" target="_blank" rel="noopener noreferrer" class="btn-github mt-3 mt-md-0">
+                Ver en GitHub
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5">
+        <!-- SECCIÓN 2: REPRODUCTOR DE MÚSICA -->
+        <section class="row g-4">
+            
+            <!-- TARJETA 1: PORTADA Y DETALLES DE LA CANCIÓN (Móvil: col-12, Tablet: col-md-6, Escritorio: col-lg-4) -->
+            <article class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="card h-100 text-center p-3 shadow-sm border-0">
+                    <h3 id="portada" class="card-title h5 fw-bold"> PORTADA DE LA CANCION </h3>
+                    <img id="imagen" src="resources/imagen_rola.png" class="card-img-top p-2 rounded" alt="Imagen de la canción activa">
+                    <div class="card-body p-2">
+                        <p id="mensaje" class="card-text text-secondary small">
+                            Sencillo colaborativo que reúne a grandes exponentes del género urbano.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TARJETA 2: INFORMACIÓN Y CONTROLES (Móvil: col-12, Tablet: col-md-6, Escritorio: col-lg-8) -->
+            <article class="col-12 col-sm-12 col-md-6 col-lg-8">
+                <div class="card h-100 p-3 shadow-sm border-0">
+                    <h5 class="card-header bg-transparent border-0 h4 fw-bold"> Lista de Reproduccion </h5>
+                    <div class="card-body">
+                        <h3 id="title" class="card-title h4 text-primary fw-bold mb-3">
+                            Cancion: China - Anuel AA, Daddy Yankee, Karol G, Ozuna, J Balvin
+                        </h3>
+                        
+                        <nav class="mb-4">
+                            <ul class="list-group list-group-flush">
+                                <li id="cantante" class="list-group-item bg-transparent border-0"><strong>Cantante(s):</strong> Anuel AA, Daddy Yankee, Karol G, Ozuna, J Balvin</li>
+                                <li id="album" class="list-group-item bg-transparent border-0"><strong>Album:</strong> Emmanuel</li>
+                                <li id="productor" class="list-group-item bg-transparent border-0"><strong>Productor principal:</strong> Tainy</li>
+                                <li id="mezcla" class="list-group-item bg-transparent border-0"><strong>Mezcla y Masterización:</strong> Mosty</li>
+                            </ul>
+                        </nav>
+
+                        <!-- CONTROLES PERSONALIZADOS DE REPRODUCCIÓN -->
+                        <div class="botones d-flex gap-2 flex-wrap mb-3">
+                            <button type="button" class="btn btn-secondary" onclick="evento_anterior()"> Anterior </button>
+                            <button type="button" class="btn btn-primary" onclick="evento_reproducir()"> Reproducir </button>
+                            <button type="button" class="btn btn-primary" onclick="evento_pausar()"> Pausar </button>
+                            <button type="button" class="btn btn-secondary" onclick="evento_siguiente()"> Siguiente </button>
+                        </div>
+
+                        <!-- ELEMENTO AUDIO NATIVO -->
+                        <audio id="audioPlayer" controls class="w-100 mt-2">
+                            <source id="audioSource" src="resources/Anuel AA, Daddy Yankee, Karol G, Ozuna & J Balvin - China.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA SEMÁNTICO -->
+    <footer class="text-center py-3 text-light mt-auto">
+        <div class="container">
+            <p class="m-0 small">Esperemos le alla gustado el trabajo    :D</p>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript Local y CDN de Bootstrap -->
+    <script src="resources/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

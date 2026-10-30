@@ -1,0 +1,152 @@
+/*-------------------------------TIPO DE LETRA & VARIABLES------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Jim+Nightshade&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bs-body-font-family: 'Poppins', 'Jim Nightshade', sans-serif;
+    --primary-color: #1D3557;
+    --secondary-color: #457B9D;
+    --white-color: #FFFFFF;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    background: #457B9D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D3557, #457B9D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D3557, #457B9D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------------------PRIMERA TARJETA--------------------------------*/
+
+.card {
+    margin: 0px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.col-4 .card {
+    border: 3px solid #1D3557;
+}
+
+h3#portada {
+    color: #1D3557;
+}
+
+nav ul li {
+    color: #1D3557;
+}
+
+h1.display-3 {
+    color: #FFFFFF;
+}
+
+.display-3 {
+    text-align: center;
+    margin: 10px;
+}
+
+/*------------------------SEGUNDA TARJETA---------------------------------*/
+
+h3.card-title {
+    color: #1D3557;
+    text-align: center;
+}
+
+p.card-text {
+    color: #1D3557;
+}
+
+.card-header {
+    color: #FFFFFF;
+    background-color: #1D3557;
+    text-align: center;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #457B9D;
+    border-color: #457B9D;
+}
+
+.btn-primary:hover {
+    color: #FFFFFF;
+    background-color: #1D3557;
+    border-color: #1D3557;
+}
+
+#btnPrev {
+    color: white;
+    background-color: #1D3557;
+    border-color: #1D3557;
+}
+
+#btnNext {
+    color: white;
+    background-color: #1D3557;
+    border-color: #1D3557;
+}
+
+li {
+    text-align: center;
+}
+
+.botones {
+    text-align: center;
+    justify-content: center;
+}
+
+.botones .btn+.btn {
+    margin-left: 8px;
+}
+
+.col-8 audio {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*------------------------COMPLEMENTOS REQUERIDOS---------------------------------*/
+
+/* Animación / Microinteracción en botones */
+.btn {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de GitHub en el Header */
+.btn-github {
+    color: #FFFFFF;
+    background: none;
+    border: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-github:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* Formato para el deslizador de Volumen personalizado */
+.form-range::-webkit-slider-thumb {
+    background: #1D3557;
+}
+
+.form-range::-moz-range-thumb {
+    background: #1D3557;
+}
+
+/* Pie de Página */
+footer {
+    background-color: rgba(29, 53, 87, 0.4);
+}
